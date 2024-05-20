@@ -5,10 +5,7 @@ from src.buttons import *
 
 
 class Bot:
-    with open(os.path.join("token", "TOKEN"), 'r') as f:
-        TOKEN = f.read()
-
-    bot = telebot.TeleBot(TOKEN)
+    bot = telebot.TeleBot(os.getenv("BOT_TOKEN"))
 
     @classmethod
     def show_main_menu(cls, message):

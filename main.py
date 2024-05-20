@@ -10,31 +10,23 @@ def start(message):
 def bot_message(message):
     if message.chat.type == 'private':
         if message.text == 'Назад':
-
             Bot.show_main_menu(message)
 
         elif message.text == 'Закончить':
-
             Schedule.update_schedule()
-
             Bot.show_main_menu(message)
 
         elif message.text == 'Расписание недели':
-
             Bot.show_with_button_back(Schedule.get_schedule(), message)
 
         elif message.text == 'Сегодняшнее расписание':
-
             todays_schedule = Schedule.get_todays_schedule()
-
             Bot.show_with_button_back([todays_schedule], message)
 
         elif message.text == 'Изменить расписание':
-
             Bot.start_changing_schedule(message)
 
         elif message.text in Schedule.current_schedule:
-
             Bot.first_show_changing_schedule_menu(message)
 
 

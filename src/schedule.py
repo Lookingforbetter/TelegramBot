@@ -24,7 +24,7 @@ class Schedule:
             if cls.current_schedule[day][i] != "":
                 schedule += f"Пара:  {i + 1}\n"
                 schedule += f"Дисциплина:  {cls.current_schedule[day][i]}\n"
-                schedule += f"Время:  " + cls.time_of_class[i] + "\n"
+                schedule += f"Время:  {cls.time_of_class[i]} \n"
                 schedule += "____________________________________\n\n"
                 flag_empty = False
 
